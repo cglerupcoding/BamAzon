@@ -25,13 +25,10 @@ connection.query('SELECT * FROM products', function(err, res) {
     // loop through rows
     for (var i=0; i<res.length; i++){
     	if (i<9){
-    		console.log(" " + res[i].Item_ID + "     | " + res[i].Product_Name + " -- " + res[i].Department_Name + "--" + res[i].Price + "--" + res[i].Stock_Quantity);
+    		console.log(" " + res[i].Item_ID + " " + res[i].Product_Name + " -- " + res[i].Department_Name + "--" + res[i].Price + "--" + res[i].Stock_Quantity);
     	}
     	else if (i >= 9){
-    		console.log(res[i].Item_ID + "     | " + res[i].Product_Name + " -- " + res[i].Department_Name + "--" + res[i].Price + "--" + res[i].Stock_Quantity);
+    		console.log(res[i].Item_ID + " " + res[i].Product_Name + " -- " + res[i].Department_Name + "--" + res[i].Price + "--" + res[i].Stock_Quantity);
     	}
     }
     
-    promptUser();
-});
-
